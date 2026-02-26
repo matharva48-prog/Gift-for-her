@@ -53,8 +53,8 @@
         </div>
 
         <div id="step3" class="hidden">
-            <img src="IMG_20260226_104839_545.webp" class="funny-img" onclick="showVideo1()">
-            <p style="font-size: 18px; font-weight: bold; margin-top:10px;">he gift nhi aahe 😂</p>
+            <img src="IMG_20260226_104839_545.jpg" class="funny-img" onclick="showVideo1()">
+            <p style="font-size: 18px; font-weight: bold; margin-top:10px;">Maza Eik  😂</p>
             <p><b>photo vr click kr</b> 😂🤣</p>
         </div>
 
@@ -85,16 +85,23 @@
             } else { alert("Only Priyanka! ❤️"); }
         }
 
-        function showFunny() {
+       function showFunny() {
             document.getElementById('step2').classList.add('hidden');
             document.getElementById('step3').classList.remove('hidden');
-            for(let i=0; i<15; i++) {
-                let e = document.createElement('div'); e.className = 'floating-emoji'; e.innerHTML = "😂";
-                e.style.left = Math.random() * 100 + "vw"; e.style.animationDelay = Math.random() * 2 + "s";
+            
+            // This creates the floating heart effect
+            for(let i=0; i<20; i++) {
+                let e = document.createElement('div'); 
+                e.className = 'floating-emoji'; 
+                e.innerHTML = "❤️"; // Changed from 😂 to ❤️
+                e.style.left = Math.random() * 100 + "vw"; 
+                e.style.animationDuration = (Math.random() * 3 + 2) + "s";
+                e.style.animationDelay = Math.random() * 2 + "s";
+                // You can also randomize the heart colors slightly
+                e.style.color = Math.random() > 0.5 ? "#ff1493" : "#ff0000"; 
                 document.body.appendChild(e);
             }
         }
-
         function showVideo1() {
             document.getElementById('step3').classList.add('hidden');
             document.getElementById('step4').classList.remove('hidden');
